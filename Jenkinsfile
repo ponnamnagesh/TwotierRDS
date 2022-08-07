@@ -15,7 +15,7 @@ pipeline {
         }
         stage ("Terraform Plan") {
             steps {
-                sh ('terraform plan') 
+                sh ('terraform plan -var-file="secrets.tfvars'') 
             }
         }
         stage ("Terraform Action") {
