@@ -20,7 +20,7 @@ pipeline {
         }
         stage ("Terraform Format") {
             steps {
-                sh ('terraform format -json') 
+                sh ('terraform fmt -json') 
             }
         }
         stage ("Terraform Action") {
