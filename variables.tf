@@ -43,12 +43,14 @@ variable "db_username" {
   description = "Database administrator username"
   type        = string
   sensitive   = true
+  default     = "CVDB"
 }
 
 variable "db_password" {
   description = "Database administrator password"
   type        = string
   sensitive   = true
+  default     = "B12345"
 }
 
 # Load Balancer variables
