@@ -15,14 +15,14 @@ pipeline {
         }
         stage ("Terraform Plan") {
             steps {
-                sh ('terraform plan -var-file="secrets.tfvars'') 
+                sh ('terraform plan') 
             }
         }
         stage ("Terraform Action") {
             steps {
                 echo "Terraform action is --> ${action}"
-                //sh ('terraform ${action} --auto-approve')
-                sh ('terraform ${action} --auto-approve -var-file="secrets.tfvars')
+                sh ('terraform ${action} --auto-approve')
+                //sh ('terraform ${action} --auto-approve -var-file="secrets.tfvars')
                 //sh ('terraform apply --auto-approve') 
                 //sh ('terraform destroy --auto-approve')
            }
