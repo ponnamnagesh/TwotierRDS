@@ -18,6 +18,11 @@ pipeline {
                 sh ('terraform plan') 
             }
         }
+        stage ("Terraform Format") {
+            steps {
+                sh ('terraform format -json') 
+            }
+        }
         stage ("Terraform Action") {
             steps {
                 echo "Terraform action is --> ${action}"
