@@ -1,7 +1,7 @@
 variable "region" {
   description = "Region where the environment will be there"
   type = string
-  default = "us-east-1"
+  default = "us-east-2"
 }
 
 # VPC variables
@@ -21,7 +21,7 @@ variable "vpc_cidr" {
 variable "azs" {
     description = "AZs present in the VPC"
     type = list(string)
-    default = ["us-east-1a", "us-east-1b"]
+    default = ["us-east-2a", "us-east-2b"]
 
 }
 
