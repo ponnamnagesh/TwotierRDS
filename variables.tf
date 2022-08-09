@@ -50,7 +50,7 @@ variable "db_password" {
   description = "Database administrator password"
   type        = string
   sensitive   = true
-  default     = "B12345"
+  default     = "Bebest1234"
 }
 
 # Load Balancer variables
